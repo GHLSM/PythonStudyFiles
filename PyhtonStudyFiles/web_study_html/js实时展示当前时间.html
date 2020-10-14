@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mine</title>
+</head>
+<body>
+<input type="text" id="d1" style="height: 50px; width: 200px;display: block">
+<button id="d2">开始</button>
+<button id="d3">结束</button>
+<script>
+    let t = null
+    let inpEle = document.getElementById('d1');
+    let startEle = document.getElementById('d2');
+    let finishEle = document.getElementById('d3');
+    function showTime() {
+        let currentTime = new Date();
+        inpEle.value = currentTime.toLocaleString();
+    }
+    startEle.onclick = function (){
+        if(!t) {
+            t = setInterval(showTime, 1000);
+        }
+    }
+    finishEle.onclick = function (){
+        clearInterval(t);
+        t = null;
+    }
+</script>
+
+</body>
+</html>

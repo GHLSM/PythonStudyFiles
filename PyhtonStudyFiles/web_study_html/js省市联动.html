@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MIne</title>
+</head>
+<body>
+<select name="" id="d1">
+    <option value="--CHOOSE--" disabled selected>--请选择--</option>
+</select>
+<select name="" id="d2"></select>
+<script>
+    let proEle = document.getElementById('d1')
+    let cityEle = document.getElementById('d2')
+    date = {
+        "河北":["廊坊","邯郸"],
+        "北京":["朝阳区","四合院"],
+        "上海":["红灯区","新区"]
+
+    };
+    for (let Province in date) {
+        let opEle = document.createElement('option')
+        opEle.innerText = Province
+        opEle.value = Province
+        proEle.appendChild(opEle)
+    }
+    proEle.onchange = function () {
+        let currentPro = proEle.value
+        let currentCityList = date[currentPro]
+        cityEle.innerHTML = ''
+        for (let i=0;i<currentCityList.length;i++){
+            let currentCity = currentCityList[i]
+            let opEle = document.createElement('option')
+            opEle.innerText = currentCity
+            cityEle.appendChild(opEle)
+        }
+    }
+
+</script>
+
+</body>
+</html>

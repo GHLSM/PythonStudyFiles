@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mine</title>
+    <style>
+    p:first-letter {
+        font-size: 48px;
+        color: aqua;
+    }
+    p:before {/*在文本开头同CSS添加内容*/
+        content: '你说的都对';
+        color: firebrick;
+    }
+    p:after {
+        content: '?';
+        color: orange;
+    }
+    </style>
+
+    /*解决清楚浮动带来的影响，父标签塌陷的问题*/
+</head>
+<body>
+    <div>div</div>
+    <p class=".c1">hhhhhhhhh</p>
+    <span>span</span>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mine</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #d1 {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            position: relative;  /*相对定位   标签由static变为relative
+                                   它的性质就从原来没有定位的标签变成了已经定位过的标签
+                                   虽然没有动，但是性质改变*/
+            left: 50px;
+            top: 50px;
+        }
+        #d2 {
+            height: 100px;
+            width: 200px;
+            background-color: aqua;
+            position: relative;
+        }
+        #d3 {
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+
+        #d4 {
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+
+            height: 50px;
+            width: 50px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    定位
+        静态
+            所有标签默认都是静态static的，无法改变位置
+        相对定位
+            想对于标签原来的位置做移动relative
+        绝对定位（常用）
+            相对于已经定位过的父标签做移动（如果没有父标签以body为参照）
+        固定定位（常用）
+            相对于浏览器窗口固定在某个位置
+
+    浏览器是优先显示文本内容的
+
+    <div id="d1"></div>
+    <div id="d2">
+<!--        woaini-->
+        <div id="d3"></div>
+    </div>
+
+    <div style="height: 500px;background-color: yellow;"></div>
+    <div style="height: 500px;background-color: aqua;"></div>
+    <div style="height: 500px;background-color: antiquewhite;"></div>
+    <div id="d4">回到顶部</div>
+
+
+
+</body>
+</html>

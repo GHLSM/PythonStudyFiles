@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="text" value="OK?" id="d1">
+
+<script>
+    let iEle = document.getElementById('d1')
+    iEle.onfocus = function () {
+        iEle.value = ''
+    }
+    iEle.onblur = function () {
+        iEle.value = 'No'
+    }
+</script>
+
+</body>
+</html>

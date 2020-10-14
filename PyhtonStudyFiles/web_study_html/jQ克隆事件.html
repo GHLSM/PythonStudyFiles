@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Title</title>
+    <style>
+        #d1 {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+<button id="d1">屠龙宝刀</button>
+<script>
+    $('#d1').on('click',function () {
+        // console.log(this)  //this永远指代当前操作对象
+        // $(this).clone().insertAfter($('body'))  //clone默认只克隆html和css，不克事件
+        $(this).clone(true).insertAfter($('body'))  //clone默认只克隆html和css，不克事件
+    })
+</script>
+</body>
+</html>

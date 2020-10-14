@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mine</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #d1 {
+            border: 3px solid black;
+        }
+        #d2 {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            float: left;
+        }
+        #d3 {
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            float: left;
+        }
+        #d4 {
+            /*height: 100px;*/
+            /*clear: left; !*标签左边或者空中没有浮动元素*!*/
+        }
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="d1" class="clearfix">
+        <div id="d2"></div>
+        <div id="d3"></div>
+<!--        <div id="d4"></div>-->
+    </div>
+</body>
+</html>
+
+解决浮动影响
+    加一个div设置好高度
+    利用clears属性
+    通用解决浮动带来影响的办法
+        伪类选择器
+        先写好处理浮动带来的影响代码.clearfix
+        以后只要有标签出现塌陷，就加一个.clearfix属性
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

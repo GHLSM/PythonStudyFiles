@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mine</title>
+    <style>
+        #d1 {
+            height: 400px;
+            width: 400px;
+            border-radius: 50%
+        }
+        .bc_green {
+            background-color: green;
+        }
+        .bc_red {
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="d1" class="c1 bc_green bc_red"></div>
+    <button id="d2">Change</button>
+
+    <script>
+        let butEle = document.getElementById('d2')
+        let divElw = document.getElementById('d1')
+        butEle.onclick = function(){
+            divElw.classList.toggle('bc_red')
+        }
+    </script>
+</body>
+</html>
