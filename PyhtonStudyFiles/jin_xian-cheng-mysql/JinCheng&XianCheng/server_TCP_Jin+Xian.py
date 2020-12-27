@@ -26,8 +26,8 @@ def server_talk(conn):
     conn.close()
 
 while True:
-    conn, addr = server.accept()
     # 通讯循环
+    conn, addr = server.accept()
     t = Thread(target=server_talk, args=(conn, ))
     t.start()
 

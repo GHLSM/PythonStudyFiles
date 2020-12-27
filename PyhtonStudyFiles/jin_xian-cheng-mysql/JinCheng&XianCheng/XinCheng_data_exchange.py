@@ -1,6 +1,4 @@
 from threading import Thread
-import time
-
 
 money = 100
 def task():
